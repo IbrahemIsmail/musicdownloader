@@ -2,3 +2,5 @@
 # python music.py -lf "", for files with song links
 # python music.py -l "", for a song link
 # python music.py "", for song name
+
+Change the pathToSave to your desired location

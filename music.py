@@ -7,7 +7,7 @@ import sys
 import os
 import time 
 
-pathToSave = "C:/Users/ibrax/Music/Music/"
+pathToSave = "C:/Users/Ibrahem/Music/Music/"
 
 def titleCase(s):
     '''
@@ -61,7 +61,8 @@ def download(song):
     vidLink, vidTitle, vidID = getVidID(song)
 
     new_file = pathToSave+ song.title() + '.mp3'
-    old_file = 'C:/Users/ibrax/Desktop/Uni/Random/musicDownloader/'+vidTitle+'-'+vidID[9:]
+    # old_file = 'C:/Users/ibrax/Desktop/Uni/Random/musicDownloader/'+vidTitle+'-'+vidID[9:]
+    old_file = os.getcwd()+'\\'+vidTitle+'-'+vidID[9:]
     extentions = ['.webm', '.m4a']
     ydl_opts = {
         'format': 'bestaudio/best'
@@ -83,7 +84,8 @@ def downloadLink(link):
     print('THISS THE VID TITLE ======>', vidTitle)
     print('THISS THE VID ID ======>', vidID)
     new_file = pathToSave+ vidTitle.title() + '.mp3'
-    old_file = 'C:/Users/ibrax/Desktop/Uni/Random/musicDownloader/'+vidTitle+'-'+vidID
+    # old_file = 'C:/Users/ibrax/Desktop/Uni/Random/musicDownloader/'+vidTitle+'-'+vidID
+    old_file = os.getcwd()+'\\'+vidTitle+'-'+vidID[9:]
     extentions = ['.webm', '.m4a']
     ydl_opts = {
         'format': 'bestaudio/best'
